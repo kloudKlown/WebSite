@@ -27,26 +27,31 @@ label {
 }
 
 .pure-img-responsive {
-    position: relative;
-    width: 80%;
-    width: auto;
+    /*position: relative;*/
+    /*width: 80%;*/
+    /*width: auto;*/
     align-content: center;
 }
 
 .circular {
-    width: 70%;
-    height: 150%;
-    border-radius: 250px;
-    -webkit-border-radius: 250px;
-    -moz-border-radius: 250px;
-    position: relative;
-    top: 50%;
-    left: 4%;
-    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    width: 80%;
+    height: 50%;
+    /*border-radius: 100%;*/
+    -webkit-border-radius: 100%;
+    /*-moz-border-radius: 100%;*/
+    position:relative;
+    top: 100px;
+    left: 50px;
+    /*box-shadow: 0 0 8px rgba(0, 0, 0, .8);*/
+    /*-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);*/
+    /*-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);*/
 }
 
+.dates{
+    position: relative;
+    top:-15px;
+    color: #e25714;
+}
 
 /*.circular-2{*/
     /*width: 30%;*/
@@ -276,13 +281,15 @@ a.pure-button-primary {
     .content-subhead i {
         margin-right: 7px;
     }
-
 /* This is the class used for the dark-background areas. */
 .ribbon {
     background: #2d3e50;
     color: #aaa;
 }
+.splash-container .content-table{
+    background-color: white;
 
+}
 /* This is the class used for the footer */
 .footer {
     background: white;
@@ -298,6 +305,17 @@ a.pure-button-primary {
     padding: 0.5em;
     height: auto;
     color: white;
+
+}
+.work-icons {
+    position: relative;
+    top: 500px;
+    left: 500px;
+    width: 3%;
+    padding: 0.5em;
+    height: auto;
+    color: white;
+
 
 }
 
@@ -413,4 +431,9 @@ ul.social-icons {
 }
 .fa-envelope:hover {
     background-color: #e25714;
+}
+
+.post-description{
+    position: relative;
+    left:2%;
 }
