@@ -53,20 +53,6 @@ label {
     color: #e25714;
 }
 
-/*.circular-2{*/
-    /*width: 30%;*/
-    /*height: 60%;*/
-    /*border-radius:150%;*/
-    /*font-size:200%;*/
-    /*line-height: 600%;*/
-    /*background-color: salmon;*/
-    /*text-align:center;*/
-    /*position: relative;*/
-    /*top: 20%;*/
-    /*!*!*right: -200px;*!*!*/
-    /*!*left: 33%;*!*/
-/*}*/
-
 /*
  * -- LAYOUT STYLES --
  * These are some useful classes which I will need
@@ -164,7 +150,7 @@ a.pure-button-primary {
     font-weight: 400;
     font-size: 200%;
     position: relative;
-    left: 100px;
+    /*left: 100px;*/
 }
 
 
