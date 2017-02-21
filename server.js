@@ -1,12 +1,25 @@
 var express = require('express');
 var app = express();
 
+
+
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // configure a public directory to host static content
 app.use(express.static(__dirname + '/Website'));
+
+//CRUD
+var CC = "HELLOOasasOOO";
+
+app.get("   /resume", function (req, res) {
+
+    res.send(CC);
+
+});
+
+require("./server/app.js")(app);
 
 require ("./test/app.js")(app);
 
