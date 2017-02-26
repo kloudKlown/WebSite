@@ -2,10 +2,12 @@
  * Created by suhas on 2/23/2017.
  */
 module.exports = function (app) {
-    var connectionString ='mongodb://127.0.0.1:27017/test';
+    // var connectionString ='mongodb://127.0.0.1:27017/test';
+
+    var connectionString = 'mongodb://admin:admin@ds157509.mlab.com:57509/testdatabase_suhas'
     var mongoose = require("mongoose");
     mongoose.connect(connectionString);
-    console.log("In blog Service server")
+    console.log("In blog Service server");
     mongoose.Promise = global.Promise;
 
     var readBlog = mongoose.Schema({
@@ -30,7 +32,7 @@ module.exports = function (app) {
         // playerName: {type: String}
     });
 
-    var PostBlogModel = mongoose.model("PostBlogModel",readBlog);
+    var PostBlogModel = mongoose.model("blogs",readBlog);
     var PostPredModel = mongoose.model("predictionmodels",readPrediction);
 
 
