@@ -15,7 +15,7 @@ module.exports = function (app) {
     function  findplayer(req,res) {
 
         var pp = req.query;
-        console.log(pp);
+        // console.log(pp);
 
         if (pp.Title){
             findbyTitle(req,res);

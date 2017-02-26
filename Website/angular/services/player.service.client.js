@@ -26,10 +26,6 @@ angular
             var url = '/api/resume?Title=A';
             return $http.get(url)
 
-        //
-        //     $http.get("/resume");
-        //
-        //
         }
 
 

@@ -1,0 +1,99 @@
+<div>
+    <div ng-Controller="predictionController">
+        <div class="header clearfix">
+            <h1 class="text-muted"> Prediction Analysis </h1>
+        </div>
+    </div>
+
+    <div class="container-noOpaque">
+        <div class="col-lg-11" style="opacity:1">
+            <table class="table" >
+                <thead>
+                <th  style="width: 20%">
+                    Player Name
+                </th>
+
+                <th style="width: 10%">
+                    Team
+                </th>
+
+                <th style="width: 10%" ng-click="predCon.sortType = 'salary'; predCon.sortReverse = !predCon.sortReverse">
+                    <span ng-show="predCon.sortType == 'salary' && !predCon.sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="predCon.sortType == 'salary' && predCon.sortReverse" class="fa fa-caret-up"> </span>
+                    Salary</th>
+                <th style="width: 5%" ng-click="predCon.sortType = 'mp'; predCon.sortReverse = !predCon.sortReverse">
+                    <span ng-show="predCon.sortType == 'mp' && !predCon.sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="predCon.sortType == 'mp' && predCon.sortReverse" class="fa fa-caret-up"> </span>
+                    MP </th>
+
+                <th style="width: 5%" ng-click="predCon.sortType = 'usageR'; predCon.sortReverse = !predCon.sortReverse">
+                    <span ng-show="predCon.sortType == 'usageR' && !predCon.sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="predCon.sortType == 'usageR' && predCon.sortReverse" class="fa fa-caret-up"> </span>
+                    Usage Rating </th>
+
+                <th style="width: 10%"> x6 </th>
+                <th style="width: 10%" ng-click="predCon.sortType = 'brnnC'; predCon.sortReverse = !predCon.sortReverse">
+                    <span ng-show="predCon.sortType == 'brnnC' && !predCon.sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="predCon.sortType == 'brnnC' && predCon.sortReverse" class="fa fa-caret-up"> </span>
+                    NN C </th>
+                <th style="width: 10%" ng-click="predCon.sortType = 'fC'; predCon.sortReverse = !predCon.sortReverse">
+                    <span ng-show="predCon.sortType == 'fC' && !predCon.sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="predCon.sortType == 'fC' && predCon.sortReverse" class="fa fa-caret-up"> </span>
+                    Forest C </th>
+                <th style="width: 10%" ng-click="predCon.sortType = 'h2oC'; predCon.sortReverse = !predCon.sortReverse">
+                    <span ng-show="predCon.sortType == 'h2oC' && !predCon.sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="predCon.sortType == 'h2oC' && predCon.sortReverse" class="fa fa-caret-up"> </span>
+                    H20 C </th>
+                <th style="width: 10%" ng-click="predCon.sortType = 'xgbC'; predCon.sortReverse = !predCon.sortReverse">
+                    <span ng-show="predCon.sortType == 'xgbC' && !predCon.sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="predCon.sortType == 'xgbC' && predCon.sortReverse" class="fa fa-caret-up"> </span>
+                    XGB C </th>
+
+                </thead>
+
+                <tbody>
+
+                <tr ng-repeat="predID in predCon.predictionData | orderBy:predCon.sortType:predCon.sortReverse">
+                    <td>
+                        <details >
+                            <summary ng-click="predCon.loadImages(predID.playerid)" >
+                                {{predID.playerid}}
+                                <!--{{predCon.sortType}}-->
+                                <!--{{predCon.sortReverse}}-->
+                            </summary   >
+                            <div id="imageRows">
+
+                                <p>
+                                <ul  ng-repeat="imgs in predCon.predictionImages ">
+                                    <img class="row-images" ng-src="{{imgs}}"/>
+                                </ul>
+                                </p>
+
+                            </div>
+                        </details>
+                    </td>
+                    <td> {{predID.team}} </td>
+                    <td> {{predID.salary}} </td>
+                    <td> {{predID.mp | number:2}} </td>
+                    <td> {{predID.usageR | number:2}} </td>
+                    <td> {{predID.x6 | number:2}} </td>
+                    <td> {{predID.brnnC | number:2}} </td>
+                    <td> {{predID.fC | number:2}} </td>
+                    <td> {{predID.h2oC| number:2}} </td>
+                    <td> {{predID.xgbC | number:2}} </td>
+
+
+                </tr>
+                </tbody>
+
+
+            </table>
+
+
+        </div>
+
+    </div>
+
+
+
+</div>

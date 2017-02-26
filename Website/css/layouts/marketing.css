@@ -28,7 +28,7 @@ label {
 
 .pure-img-responsive {
     /*position: relative;*/
-    /*width: 80%;*/
+    width: 100%;
     /*width: auto;*/
     align-content: center;
 }
@@ -157,10 +157,19 @@ a.pure-button-primary {
 .home-menu .pure-menu-heading-2 {
     color: white;
     font-weight: 100;
+    font-size: 150%;
+    position: relative;
+    /*left: -150px;*/
+    top: 15px;
+}
+
+.pure-menu-item2 {
+    color: white;
+    font-weight: 100;
     font-size: 100%;
     position: relative;
-    left: 100px;
-    top: -15px;
+    /*left: -150px;*/
+    top: 15px;
 }
 
 
