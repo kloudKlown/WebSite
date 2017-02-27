@@ -22,6 +22,13 @@
                     controllerAs: "predCon"
 
                 })
+                .when("/feedback",{
+                    templateUrl: "/angular/views/nba_user/feedback.view.client.html",
+                    controller: "feedbackController",
+                    controllerAs: "feedCon"
+                })
+
+
                 .otherwise({
                     redirectTo: "/"
                 });

@@ -10,6 +10,7 @@
     <script src="angular/views/nba_controller/blogScript.js"></script>
     <script src="angular/nba_service/nba_blogging.service.client.js"></script>
     <script src="angular/views/nba_controller/predictionScript.js"></script>
+    <script src="angular/views/nba_controller/feedbackScript.js"></script>
     <link rel="shortcut icon" href="img/common/tab-icon.png"/>
     <script src="js/imageloader.js"/>
     <script src="lodash.js"></script>
@@ -40,11 +41,11 @@
 <div class="header clearfix container">
     <nav>
         <ul class="nav nav-pills pull-right">
-            <li role="presentation" ><a href="#"  class="active2">Home</a></li>
-            <li role="presentation" ><a href="#"  class="active2">Feedback</a></li>
+            <li role="presentation" ><a href="#/"  class="active2">Home</a></li>
+            <!--<li role="presentation" ><a href="#/feedback"  class="active2">Feedback</a></li>-->
         </ul>
     </nav>
-    <h3 class="text-muted">NBA Analytics</h3>
+    <a href="#/"> <h3  class="text-muted">NBA Analytics</h3> </a>
 </div>
 
 <div class="container" ng-view>

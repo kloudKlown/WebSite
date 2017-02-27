@@ -7,7 +7,8 @@ module.exports = function (app) {
     var connectionString = 'mongodb://admin:admin@ds157509.mlab.com:57509/testdatabase_suhas'
     var mongoose = require("mongoose");
     mongoose.connect(connectionString);
-    console.log("In blog Service server");
+
+    // console.log("In blog Service server");
     mongoose.Promise = global.Promise;
 
     var readBlog = mongoose.Schema({
@@ -32,20 +33,30 @@ module.exports = function (app) {
         // playerName: {type: String}
     });
 
+    var fB = mongoose.Schema({
+       feedB: {type: String}
+    });
+
     var PostBlogModel = mongoose.model("blogs",readBlog);
     var PostPredModel = mongoose.model("predictionmodels",readPrediction);
 
+    var FeedbackModel = mongoose.model("feedbackmodels",fB);
 
     app.get('/api/blog', returnBlogs);
     app.get('/api/prediction', returnPrediction);
     app.get('/api/predictionF', fileList);
 
+    app.get('/api/saveFeedback',FeedbackModel);
+
     var fileSystem = require('fs');
     const testFolder = './Website/img/PlayerPlots';
-    var fileList = []
+    var fileList = [];
 
 
-
+    function FeedbackModel(req,res) {
+        console.log("HELLOOS");
+        console.log(req.body);
+    }
     function returnBlogs(req,res) {
         PostBlogModel.find().then(
             function (Posts) {
@@ -88,5 +99,7 @@ module.exports = function (app) {
         });
 
     }
+
+
 
 }

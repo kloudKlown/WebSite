@@ -12,27 +12,34 @@
             var blogFunctions = {
                 getBlogData : getBlogData,
                 getPredictionData : getPredictionData,
-                fileList : fileList
+                fileList : fileList,
+                feedBackSave:feedBackSave
             };
 
             return blogFunctions;
 
             function getBlogData() {
-                var url="/api/blog"
-                console.log( $http.get(url) )
+                var url="/api/blog";
+                // console.log( $http.get(url) )
                 return $http.get(url)
             };
 
             function getPredictionData() {
-                var url ="/api/prediction"
-                console.log($http.get(url) )
+                var url ="/api/prediction";
+                // console.log($http.get(url) )
                 return $http.get(url)
             };
 
             function fileList() {
-                var url ="/api/predictionF"
-                console.log($http.get(url) )
+                var url ="/api/predictionF";
+                // console.log($http.get(url) )
                 return $http.get(url)
+            }
+
+            function feedBackSave(feedback) {
+                var url = "/api/saveFeedback";
+                console.log(feedback);
+                $http.push(url,feedback);
             }
         }
         

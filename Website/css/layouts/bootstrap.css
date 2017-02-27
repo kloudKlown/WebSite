@@ -1643,7 +1643,7 @@ pre code {
   padding-right: 15px;
   padding-left: 15px;
   background-color: white;
-  opacity: 0.9;
+  opacity: 1;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -4987,6 +4987,8 @@ a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
+  background-image: url("/img/common/raptors.jpg");
+  background-size: 1000px 200px;
   background-color: #eee;
 }
 .jumbotron h1,
@@ -6820,5 +6822,19 @@ font-weight: 400;
 #imageRows img:active {
   -webkit-transform: scale(6);
 }
+.NBA-prediction{
+  color: #5bc0de;
+  position: relative;
+  top: -10px;
+  left: -30px;
+
+}
+.NBA-prediction :hover{
+  color: #2b669a;
+  /*border-bottom-color: white;*/
+}
+/*#predictionTag{*/
+  /*background-image: url("/img/common/raptors.jpg")*/
+/*}*/
 
 /*# sourceMappingURL=bootstrap.css.map */
