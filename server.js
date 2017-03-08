@@ -23,5 +23,5 @@ app.use(express.static(__dirname + '/Website'));
 
 require("./server/app.js")(app);
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3004;
 app.listen(port);

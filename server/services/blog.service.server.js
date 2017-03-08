@@ -57,6 +57,7 @@ module.exports = function (app) {
         console.log("HELLOOS");
         console.log(req.body);
     }
+
     function returnBlogs(req,res) {
         PostBlogModel.find().then(
             function (Posts) {
@@ -71,6 +72,7 @@ module.exports = function (app) {
         );
         
     }
+
     function returnPrediction(req,res) {
 
         PostPredModel.find().then(
