@@ -3,9 +3,9 @@
  */
 
 module.exports = function(app){
-       // require("./services/player.service.server.js")(app);
-        require("./services/blog.service.server.js")(app);
 
-    console.log("Hello Servver");
 
-}
+    // require("./services/player.service.server.js")(app);
+    require("./services/blog.service.server.js")(app);
+
+};

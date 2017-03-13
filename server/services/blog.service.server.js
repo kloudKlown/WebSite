@@ -4,11 +4,9 @@
 module.exports = function (app) {
     // var connectionString ='mongodb://127.0.0.1:27017/test';
 
-    var connectionString = 'mongodb://admin:admin@ds157509.mlab.com:57509/testdatabase_suhas'
+    var connectionString = 'mongodb://SuhasKabinna:ilovepanda123@ds157509.mlab.com:57509/testdatabase_suhas'
     var mongoose = require("mongoose");
     mongoose.connect(connectionString);
-
-    // console.log("In blog Service server");
     mongoose.Promise = global.Promise;
 
     var readBlog = mongoose.Schema({
@@ -47,6 +45,13 @@ module.exports = function (app) {
     app.get('/api/predictionF', fileList);
 
     app.get('/api/saveFeedback',FeedbackModel);
+
+    app.post('/api/contact/',postComment);
+
+    function  postComment(req,res) {
+        console.log("Coming here to BS",req.body);
+        res.status(200);
+    };
 
     var fileSystem = require('fs');
     const testFolder = './Website/img/PlayerPlots';

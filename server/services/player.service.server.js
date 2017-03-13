@@ -3,37 +3,12 @@
  */
 
 module.exports = function (app) {
-    console.log("User server");
 
-    var CC = "From PlayerServer";
-    var C1 = [
-        {Title:"A", pID:"RIGHT RIGHT"}
-    ];
+    app.get('/api/contact',postComment);
 
-    app.get('/api/resume',findplayer);
+    function  postComment(req,res) {
+        console.log("Coming here to Pserver");
+        // res.status(200);
+    };
 
-    function  findplayer(req,res) {
-
-        var pp = req.query;
-        // console.log(pp);
-
-        if (pp.Title){
-            findbyTitle(req,res);
-        }
-        // console.log(req);
-        // res.send(C1);
-    }
-
-    function  findbyTitle(req,res) {
-        var Ti = req.query.Title;
-        for (var v in C1){
-            if(C1[v].Title  == Ti){
-                res.send(C1[v].pID);
-                return;
-
-            }
-        }
-        res.send("Not Found");
-    }
-
-}
+};
