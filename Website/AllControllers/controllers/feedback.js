@@ -17,6 +17,19 @@
                 }
 
             }
+
+            vm.searchPhotos = function (text) {
+
+                PlayerService
+                    .searchPhotos(text)
+                    .then(function(response) {
+                        data = response.data.replace("jsonFlickrApi(","");
+                        data = data.substring(0,data.length - 1);
+                        data = JSON.parse(data);
+                        vm.photos = data.photos;
+                        console.log(vm.photos);
+                    });
+            }
         }
 
 })();
