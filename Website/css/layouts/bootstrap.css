@@ -6882,13 +6882,13 @@ navButtons2,
   font-size: 20px;
 }
 
-navButtons2.noBottom,
+navButtons2,
 .navButtons .noBottom{
   color:darkslategrey;
   text-shadow: darkgrey;
   text-decoration: none;
 }
-navButtons2>.underLine,
+navButtons2,
 .navButtons>.underLine{
   border-bottom: 2px solid steelblue;
   width: 0;

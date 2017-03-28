@@ -4972,6 +4972,7 @@ a.badge:focus {
         padding-left: 60px;
         padding-right: 60px;
     }
+
     .jumbotron h1,
     .jumbotron .h1 {
         font-size: 63px;
@@ -6730,7 +6731,52 @@ button.close {
 
 /* ALL THINGS UNHOLY START FROM HERE */
 
+#landingPage{
+    background-color: black;
+}
 
+.landingHeader{
+    position: fixed;
+    left:10%;
+    width:80%;
+    min-height:50%;
+    top: 25%;
+    background-color: black;
+    /*border-width: 222px;*/
+    border-radius: 20px;
+    /*border-color: whitesmoke;*/
+}
 
+.landingTitle{
+    font-size: 80px;
+    font-family: "Freestyle Script";
+    font-kerning: auto;
+    font-weight: 900;
+}
 
+.landingTitle .split1 {
+    position: relative;
+    left: -23%;
+    top: -180px;
+}
 
+.landingTitle .split2{
+    position: fixed;
+    background: url("/img/common/Hobbes.png");
+
+    left:30%;
+    /*width:10%;*/
+    /*height:10%;*/
+}
+
+@media (max-width: 686px) {
+    .landingTitle{
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 386px) {
+    .landingTitle{
+        font-size: 40px;
+    }
+}

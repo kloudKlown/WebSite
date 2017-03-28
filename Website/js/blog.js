@@ -11,6 +11,13 @@ $(document).ready(function () {
         else {
             $("#Toggle").css('display','')
         }
-    })
+    });
+    $(document).mousemove(function(e){
+        var $width = ($(document).width())/255;
+        var $height = ($(document).height())/255;
+        var $pageX = parseInt(e.pageX / $width,10);
+        $("#landingPage").css("background-color", "rgb("+$pageX+","+127+","+110+")");
+        $("#landingHeader").css("background-color", "rgb("+$pageX+","+127+","+110+")");
 
+    });
 });
