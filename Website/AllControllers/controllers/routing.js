@@ -8,7 +8,7 @@
             $routeProvider
                 .when("/", {
                     templateUrl: "/angular/views/user/default.view.client.html",
-                    controller: "resumeViewController"
+                    controller: "defaultViewController"
                 })
                 .when("/resume",{
                     templateUrl: "/angular/views/user/resume.view.client.html",

@@ -1646,6 +1646,7 @@ pre code {
   padding-left: 15px;
   background-color: white;
   opacity: 1;
+  box-shadow: 1px 1px 1px 1px grey;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -4208,6 +4209,30 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
   }
 }
+
+.blog-header{
+  position:relative;
+  top:5%;
+  left:10%;
+}
+.blog-header .blog-title{
+  font-family: "Bookman Old Style";
+  color: #333333;
+}
+
+.blogBody{
+  position:relative;
+  top:10%;
+  left:-3%;
+  width: 70%;
+  font-family: Consolas;
+  font-size: 18px;
+  box-shadow: 5px 5px 1px #888888;
+  overflow-y : auto;
+  overflow-x: hidden;
+
+}
+
 .navbar-collapse {
   padding-right: 15px;
   padding-left: 15px;
@@ -4985,13 +5010,11 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
   color: inherit;
+  width: 100%;
   background-image: url("/img/common/raptors.jpg");
-  background-size: 1000px 200px;
-  background-color: #eee;
+  background-size: 100% 100%;
+  background-color: #eeeeee;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -5007,9 +5030,9 @@ a.badge:focus {
 }
 .container .jumbotron,
 .container-fluid .jumbotron {
-  padding-right: 15px;
-  padding-left: 15px;
-  border-radius: 6px;
+  padding-right: 0px;
+  padding-left: 0px;
+  border-radius: 0px;
 }
 .jumbotron .container {
   max-width: 100%;
@@ -6825,14 +6848,14 @@ font-weight: 400;
   -webkit-transform: scale(6);
 }
 .NBA-prediction{
-  color: #5bc0de;
+  color: lightcoral;
   position: relative;
-  top: -10px;
+  top: -30px;
   left: -30px;
 
 }
 .NBA-prediction :hover{
-  color: #2b669a;
+  color: coral;
   /*border-bottom-color: white;*/
 }
 #greeting,
@@ -6851,16 +6874,21 @@ font-weight: 400;
     display: flex;
     justify-content: space-between;
 }
+
+navButtons2,
 .navButtons{
   position: relative;
   font-family: Consolas;
   font-size: 20px;
 }
+
+navButtons2.noBottom,
 .navButtons .noBottom{
   color:darkslategrey;
   text-shadow: darkgrey;
   text-decoration: none;
 }
+navButtons2>.underLine,
 .navButtons>.underLine{
   border-bottom: 2px solid steelblue;
   width: 0;
@@ -6869,6 +6897,8 @@ font-weight: 400;
   transition: width .3s ease;
 
 }
+
+navButtons2:hover>.underLine,
 .navButtons:hover>.underLine{
   width: 100%;
   opacity: 1;
@@ -7133,10 +7163,14 @@ font-weight: 400;
 
 #forest,
 #mountain2 {
-  /*position: center;*/
-  width: 110%
+  position: relative;
+  width: 100%;
+  height: inherit;
+  -webkit-transform: translateY(-30%);
+  /*top:-280px;*/
+  /*height: 70%;*/
+  z-index: 3;
 }
-
 #message {
   top: 35%;
   right: 0;
@@ -7171,18 +7205,19 @@ font-weight: 400;
 
 #forestHolder {
   z-index: 3;
+  -webkit-transition: .1s linear;
+  background: -webkit-linear-gradient(bottom, #fff 20px, transparent 10px);
   position: absolute;
-  bottom: 50px;
-  height: auto;
+  bottom: 10px;
+  /*height: auto;*/
   max-height: 350px;
   width: 100%;
-  overflow: hidden
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
-#forest {
-  height: auto;
-  z-index: 8
-}
+
 
 #mountainHolder {
   -webkit-transform: translate3d(0, 0, 0);
@@ -10541,6 +10576,9 @@ div {
   backface-visibility: hidden
 }
 
+.headerMainPage{
+
+}
 ::selection {
   background: #646464;
   color: #fff
@@ -11897,7 +11935,7 @@ div {
     bottom: 50px
   }
   #mountainHolder {
-    max-height: auto;
+    /*max-height: auto;*/
     height: auto;
     bottom: 0;
     border-width: 140px

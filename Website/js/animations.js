@@ -73,7 +73,8 @@ function isFullyScrolledIntoView(t) {
 $(document).ready(function() {
     function t() {
         var t = $(window).scrollTop();
-        $("#mountainHolder2").css("transform", "translateY(" + Math.round(.25 * t) + "px)"), $("#mountainHolder").css("transform", "translateY(" + Math.round(.5 * t) + "px)")
+        $("#forestHolder").css("transform", "translateY(" + Math.round(.25 * t) + "px)"), $("#forestHolder").css("transform", "translateY(" + Math.round(.5 * t) + "px)")
+
     }
 
     function e(t) {
@@ -489,7 +490,7 @@ $(document).ready(function() {
         console.log(t);
         if ("slideRight2" == t) {
             var e = v;
-            v = parseInt(v) - 1, 3 == v && (v = 4);
+            v = parseInt(v) - 1, 2 == v && (v = 4);
             // console.log(v);
             var o = $("#div" + e),
                 s = $("#div" + v);
@@ -509,7 +510,7 @@ $(document).ready(function() {
             }, 200)
         } else {
             var e = v;
-            v = parseInt(v) + 1, 5 == v && (v = 4);
+            v = parseInt(v) + 1, 5 == v && (v = 3);
             // console.log(v);
             var o = $("#div" + e),
                 s = $("#div" + v);

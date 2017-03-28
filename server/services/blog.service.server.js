@@ -4,7 +4,7 @@
 module.exports = function (app) {
     // var connectionString ='mongodb://127.0.0.1:27017/test';
 
-    var connectionString = 'mongodb://SuhasKabinna:ilovepanda123@ds157509.mlab.com:57509/testdatabase_suhas'
+    var connectionString = 'mongodb://SuhasKabinna:ilovepanda123@ds157509.mlab.com:57509/testdatabase_suhas';
     var mongoose = require("mongoose");
     mongoose.connect(connectionString);
     mongoose.Promise = global.Promise;

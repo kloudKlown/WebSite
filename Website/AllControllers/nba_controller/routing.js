@@ -27,8 +27,11 @@
                     controller: "feedbackController",
                     controllerAs: "feedCon"
                 })
-
-
+                .when("/service",{
+                    templateUrl: "/angular/views/nba_user/nba_service.view.client.html",
+                    controller: "nba_serviceController",
+                    controllerAs: "nbaSCon"
+                })
                 .otherwise({
                     redirectTo: "/"
                 });

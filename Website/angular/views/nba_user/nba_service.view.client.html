@@ -1,0 +1,76 @@
+<div class="blogContainer" ng-controller="nba_serviceController"  >
+
+        <div class="blog-header">
+            <h1 class="blog-title">
+                NBA Rest API
+            </h1>
+        </div>
+
+        <div class="row" >
+
+            <div class="blogBody" >
+                <p>
+                 <h2> Why NBA API you ask ??</h2>
+                <b>T</b>his blog/API post is primarily meant for sports enthusiasts like myself to have easy access to
+                NBA data. During my obsession with sports analytics, I tired in vain to find good API sources to collect
+                all the data. However all the good API's were either discontinued; like ESPN or charging over
+                    <a href="https://probasketballapi.com/"> 200$</a> for previous season data.
+                </p>
+                <p>
+                    I could not afford any of these so as a good programmer, wrote a lot of python scripts to collect,
+                    clean and insert the data to SQL DB. So far, I have collected data from the 2014 season till 2016 season
+                    and the API will contain this data.
+
+                </p>
+                <p>
+                    As I am learning about restful API design, this project was primarily meant as a way to learn about
+                    API design and maybe help some sports geeks out in the process.
+                </p>
+
+                <h2> API Features </h2>
+
+                <p>The API currently can take two parameters i.e., "Date" or "player name". The response only supports XML
+                    format and I will be adding Json format soon.
+
+                </p>
+                <div class="panel panel-info">
+                    <div class="panel panel-heading">
+                        https://safe-sands-52168.herokuapp.com/NBA-Logs?name=\NAME\
+                    </div>
+                    <div class="panel panel-body">
+                    <p>Lists the game logs for a player starting from the games in 2014. All the player names can be accessed,
+                    by passing '?name=' in the URL.
+                    The first and last names are separated by '-' in the URL. For example to get the game logs of Kyle Lowry, the link
+                        would be <br>
+                        https://safe-sands-52168.herokuapp.com/NBA-Logs?name=Kyle-Lowry
+                    </p>
+                    <p>
+                    I higly recommend first getting all the names of the players and then iteratively collecting the
+                        game logs of every player.
+                    </p>
+                    </div>
+
+                </div>
+
+
+                <div class="panel panel-info">
+                    <div class="panel panel-heading">
+                        https://safe-sands-52168.herokuapp.com/NBA-Logs/date?date=\DATE\
+                    </div>
+                    <div class="panel panel-body">
+                        <p>Lists the player logs for that particular date. Date format is MM/DD/YYYY. This is perfect
+                            when you want to get the dates for specific days of the year or specific months of the year.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+</div>
